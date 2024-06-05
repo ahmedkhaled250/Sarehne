@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+:root {
+  --divider: #dcdcdc;
+  --overlay: #888;
+  --main-color: #10bbb3;
+  --main-transition: 0.3s;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+label {
+  cursor: pointer;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #f6f6f6 !important;
+  direction: rtl;
+}
+nav .navbar-brand img {
+  width: 90px;
+}
+.main-color {
+  color: var(--main-color);
+}
+.main-bg-color {
+  background-color: var(--main-color);
+}
+.logo img {
+  width: 150px;
+}
+.button {
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.button:hover {
+  background-color: #0dcac1;
+}
+.full-data span {
+  display: inline-block;
+  width: 100px;
+}
+.full-data::after {
+  content: "";
+  height: 2px;
+  width: 50%;
+  background-color: #eee;
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 50px);
+  transform: translateY(-50%);
+}
+.full-data::before {
+  content: "";
+  height: 2px;
+  width: 50%;
+  background-color: #eee;
+  position: absolute;
+  top: 50%;
+  right: calc(50% + 50px);
+  transform: translateY(-50%);
+}
+.form-control:focus,
+.form-select:focus {
+  border: 2px solid var(--main-color);
+  box-shadow: none;
+}
+.verifyEmail nav, .signin nav {
+  height: 70px;
+}
+.verifyEmail section,.signin section {
+  height: calc(100vh - (70px + 100px));
+}
+.verifyEmail footer,.signin footer {
+  height: 100px;
+}
+@media screen and (max-width: 992px) {
+  section > div {
+    width: 100%;
+  }
+}
+.success-message{
+  background-color: var(--main-color);
+}
+.success-message i {
+  cursor: pointer;
+}
+.success-message::after{
+  content: "";
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #098882;
+  animation: success-message 3s linear;
+}
+@keyframes success-message {
+  0%{
+    left: 0;
+  }
+  100%{
+    left: 100%;
+  }
+}

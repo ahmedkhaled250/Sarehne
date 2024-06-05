@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sarehne</title>
+    <link rel="shortcut icon" href="../images/icon.jpeg" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/messages.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><img src="../images/logo.png" alt="Sarehne"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link fs-5 fw-medium mx-1"
+                aria-current="page"
+                href="messages.html"
+              >
+                الرسائل</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fw-medium mx-1" href="profile.html"
+                >حسابى</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fw-medium mx-1" id="">تسجيل خروج</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      <div
+        class="success-message d-none position-fixed top-50 translate-middle-y start-0 text-white py-3 px-5 rounded-end-3 overflow-hidden"
+        id="successMessage"
+      >
+        <p></p>
+        <i class="fa-solid fa-xmark position-absolute top-0 end-0 p-2"></i>
+      </div>
+    <section class="d-flex align-items-center justify-content-center p-3">
+      <div class="p-3 bg-white col-lg-6 col-md-8 text-center rounded-4">
+        <div class="">
+          <img
+            id="profileImage"
+            src="../images/profile.jpg"
+            class="profile-image rounded-circle"
+            alt="Sarehne"
+          />
+        </div>
+        <h1 class="my-3 main-color" id="userNameHeader"></h1>
+        <a
+          class="copy-link p-3 mx-auto rounded-pill fw-medium mb-2 d-block text-dark"
+          ></a
+        >
+        <p class="fs-8">شارك الرابط وابدأ بتلقي الرسائل والصراحات</p>
+        <ul
+          class="nav w-100 bg-body-secondary rounded-3 nav-pills p-2 mb-3"
+          id="pills-tab"
+          role="tablist"
+        >
+          <li class="nav-item col-4" role="presentation">
+            <button
+              class="nav-link active w-100"
+              id="pills-home-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-home"
+              type="button"
+              role="tab"
+              aria-controls="pills-home"
+              aria-selected="true"
+            >
+              الملف الشخصى
+            </button>
+          </li>
+          <li class="nav-item col-4" role="presentation">
+            <button
+              class="nav-link w-100"
+              id="pills-profile-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-profile"
+              type="button"
+              role="tab"
+              aria-controls="pills-profile"
+              aria-selected="false"
+            >
+              الحساب
+            </button>
+          </li>
+          <li class="nav-item col-4" role="presentation">
+            <button
+              class="nav-link w-100"
+              id="pills-contact-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-contact"
+              type="button"
+              role="tab"
+              aria-controls="pills-contact"
+              aria-selected="false"
+            >
+              الصورة
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div
+            class="tab-pane fade show active"
+            id="pills-home"
+            role="tabpanel"
+            aria-labelledby="pills-home-tab"
+            tabindex="0"
+          >
+            <h5 class="fw-bold my-3">اعداد ملفى</h5>
+            <form id="updateProfile">
+              <div class="p-2 rounded-3 bg-body-secondary">
+                <input
+                  type="text"
+                  required
+                  id="userName"
+                  placeholder="الاسم"
+                  class="form-control mb-2"
+                  name="userName"
+                />
+                <p
+                  id="alertUserName"
+                  class="alert alert-danger d-none text-end p-2"
+                ></p>
+                <input
+                  type="text"
+                  required
+                  id="linkName"
+                  placeholder="الاسم المستخدم"
+                  name="linkName"
+                  class="form-control my-2"
+                />
+                <p
+                  id="alertLinkName"
+                  class="alert alert-danger d-none text-end p-2"
+                ></p>
+                <input
+                  type="email"
+                  required
+                  id="email"
+                  placeholder="البريد الالكترونى"
+                  name="email"
+                  class="form-control my-2"
+                />
+                <p
+                  id="alertEmail"
+                  class="alert alert-danger d-none text-end p-2"
+                ></p>
+                <select name="gender" class="form-select my-2" id="gender">
+                  <p
+                    id="alertProfile"
+                    class="alert alert-danger d-none text-end p-2"
+                  ></p>
+                  <option value="Male">ذكر</option>
+                  <option value="Female">انثى</option>
+                </select>
+                <button
+                  type="submit"
+                  class="btn button w-100 main-bg-color text-white"
+                >
+                  حفظ التغييرات
+                </button>
+              </div>
+            </form>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="pills-profile"
+            role="tabpanel"
+            aria-labelledby="pills-profile-tab"
+            tabindex="0"
+          >
+            <h5 class="fw-bold my-3">تعديل كلمه المرور</h5>
+            <form id="updatePassword">
+              <div class="p-2 rounded-3 bg-body-secondary">
+                <input
+                  type="password"
+                  required
+                  id="oldPassword"
+                  placeholder="كلمه المرور القديمة"
+                  name="oldPassword"
+                  class="form-control my-2"
+                />
+                <p
+                  id="alertOldPassword"
+                  class="alert alert-danger d-none text-end p-2"
+                ></p>
+                <input
+                  type="password"
+                  required
+                  id="newPassword"
+                  placeholder="كلمه المرور الجديدة"
+                  name="newPassword"
+                  class="form-control my-2"
+                />
+                <p
+                  id="alertNewPassword"
+                  class="alert alert-danger d-none text-end p-2"
+                ></p>
+                <input
+                  type="password"
+                  required
+                  id="newCPassword"
+                  placeholder="تأكيد كلمه المرور الجديدة"
+                  name="newCPassword"
+                  class="form-control my-2"
+                />
+                <p
+                  id="alert"
+                  class="alert alert-danger d-none text-end p-2 mt-4"
+                ></p>
+                <button
+                  type="submit"
+                  class="btn button w-100 main-bg-color text-white"
+                >
+                  حفظ التغييرات
+                </button>
+              </div>
+            </form>
+            <h5 class="fw-bold my-3">هل تريد ايقاف الحساب؟</h5>
+            <button id="stopProfile" class="btn w-100 text-white">
+              ايقاف الحساب
+            </button>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="pills-contact"
+            role="tabpanel"
+            aria-labelledby="pills-contact-tab"
+            tabindex="0"
+          >
+            <h5 class="fw-bold my-3">تغيير صوره الملف الشخصي</h5>
+            <form id="updateProfileImage">
+              <div class="p-2 rounded-3 bg-body-secondary">
+                <input
+                  type="file"
+                  id="profileImageInput"
+                  name="profileImage"
+                  class="form-control my-2"
+                />
+                <p
+                  id="alertProfileImage"
+                  class="alert alert-danger d-none text-end p-2"
+                ></p>
+                <button
+                  type="submit"
+                  class="btn button w-100 main-bg-color text-white"
+                >
+                  تغيير صورة ملفك الشخصى
+                </button>
+              </div>
+            </form>
+            <div id="deleteImage" class="d-none">
+              <h5 class="fw-bold my-3">هل تريد ايقاف الحساب؟</h5>
+              <button
+                id="deleteProfileImage"
+                class="btn button w-100 delete text-white"
+              >
+                حذف صوره الملف الشخصى
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+        <div class="position-fixed top-0 start-0 end-0 bottom-0 bg-black bg-opacity-75" id="loadPage">
+      <div class="d-flex align-items-center justify-content-center w-100 h-100">
+        <i class="text-white fs-1 fa-solid fa-spin fa-spinner"></i>
+      </div>
+    </div>
+    <footer class="py-3 main-bg-color w-100">
+      <div
+        class="d-flex text-white align-items-center justify-content-center flex-column gap-2"
+      >
+        <div class="">
+          <a href=""><i class="fa-brands text-white fs-4 fa-twitter"></i></a>
+          <a href=""
+            ><i class="fa-brands text-white mx-4 fs-4 fa-facebook"></i
+          ></a>
+          <a href=""><i class="fa-brands text-white fs-4 fa-instagram"></i></a>
+        </div>
+        <div class="">
+          <a href="" class="link-light mx-2">الشروط</a>
+          <a href="" class="link-light mx-2">الخصوصية</a>
+          <a href="" class="link-light mx-2">المساعده</a>
+          <a href="" class="link-light mx-2">اتصل بنا</a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/profile.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

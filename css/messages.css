@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+:root {
+  --divider: #dcdcdc;
+  --overlay: #888;
+  --main-color: #10bbb3;
+  --main-color-opacity: rgba(16, 187, 179, 0.3);
+  --main-transition: 0.3s;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #f6f6f6 !important;
+  direction: rtl;
+}
+nav .navbar-brand img {
+  width: 90px;
+}
+.main-color {
+  color: var(--main-color);
+}
+.main-bg-color {
+  background-color: var(--main-color);
+}
+.nav-pills .nav-link.active {
+  background-color: var(--main-color);
+  color: #fff;
+}
+.nav-pills .nav-link {
+  color: #000;
+}
+#message img {
+  width: 40px;
+}
+#message {
+  border: 1px solid var(--main-color-opacity);
+}
+#message .dot {
+  width: 5px;
+}
+.fs-8 {
+  font-size: 14px;
+}
+.free-mesage i {
+  font-size: 150px;
+  color: var(--divider);
+  transform: translateY(0%);
+  animation: scrolling 1.3s linear infinite;
+}
+@keyframes scrolling {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.button {
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.button:hover {
+  background-color: #0dcac1;
+}
+.delete {
+  background-color: #f1786c !important;
+}
+.delete:hover {
+  background-color: #e45649 !important;
+}
+.form-control:focus,
+.form-select:focus {
+  border: 2px solid var(--main-color);
+  box-shadow: none;
+}
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border: solid 3px var(--main-color);
+}
+.copy-link{
+  border: solid 2px var(--main-color);
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  font-size: small;
+}
+.copy-link::after{
+  content: "نسخ الرابط";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: var(--main-color);
+  color: #fff;
+  transition: 0.4s;
+}
+.copy-link:hover:after{
+  left: 0%;
+}
+.success-message{
+  background-color: var(--main-color);
+}
+.success-message i {
+  cursor: pointer;
+}
+.success-message::after{
+  content: "";
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #098882;
+  animation: success-message 3s linear;
+}
+@keyframes success-message {
+  0%{
+    left: 0;
+  }
+  100%{
+    left: 100%;
+  }
+}

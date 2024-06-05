@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+:root {
+  --divider: #dcdcdc;
+  --overlay: #888;
+  --main-color: #10bbb3;
+  --main-color-opacity: rgba(16, 187, 179, 0.3);
+  --main-transition: 0.3s;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #f6f6f6 !important;
+  direction: rtl;
+}
+nav .navbar-brand img {
+  width: 90px;
+}
+.main-color {
+  color: var(--main-color);
+}
+.main-bg-color {
+  background-color: var(--main-color);
+}
+.button {
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.button:hover {
+  background-color: #0dcac1;
+}
+.form-control {
+  min-height: 77px !important;
+}
+.form-control:focus {
+  border: 2px solid var(--main-color);
+  box-shadow: none;
+}
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border: solid 3px var(--main-color);
+}
+.success-message {
+  background-color: var(--main-color);
+}
+.success-message i {
+  cursor: pointer;
+}
+.success-message::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #098882;
+  animation: success-message 3s linear;
+}
+@keyframes success-message {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.send-message-container nav {
+  height: 70px;
+}
+.send-message-container section {
+  height: calc(100vh - (70px + 100px));
+}
+.send-message-container footer {
+  height: 100px;
+}
