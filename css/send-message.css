@@ -33,11 +33,11 @@ nav .navbar-brand img {
   cursor: pointer;
   transition: var(--main-transition);
 }
-.button:hover {
+.button:hover , .button:focus{
   background-color: #0dcac1;
 }
 .form-control {
-  min-height: 77px !important;
+  min-height: 69px !important;
 }
 .form-control:focus {
   border: 2px solid var(--main-color);
@@ -71,13 +71,4 @@ nav .navbar-brand img {
   100% {
     left: 100%;
   }
-}
-.send-message-container nav {
-  height: 70px;
-}
-.send-message-container section {
-  height: calc(100vh - (70px + 100px));
-}
-.send-message-container footer {
-  height: 100px;
 }
