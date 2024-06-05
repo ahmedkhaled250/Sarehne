@@ -37,7 +37,7 @@ nav .navbar-brand img {
   cursor: pointer;
   transition: var(--main-transition);
 }
-.button:hover {
+.button:hover , .button:focus{
   background-color: #0dcac1;
 }
 .full-data span {
